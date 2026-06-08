@@ -11,16 +11,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
-            /* Colour Overrides based on Family Crest */
-            #bg { background-color: #fdfbf7; background-image: none; } /* Cream background */
-            #bg:after { display: none; } 
-            #header .logo { border-color: #d4af37; border-radius: 100%; overflow: hidden; padding: 0; } /* Muted Gold */
-            #header nav ul li a:hover { color: #5a2e82; } /* Deep Purple */
-            .major { border-bottom-color: #d4af37; }
-            input[type="submit"].primary, button.primary, .button.primary { background-color: #5a2e82; box-shadow: none; color: #ffffff !important; }
-            input[type="submit"].primary:hover, button.primary:hover, .button.primary:hover { background-color: #d4af37; }
-        </style>
+<style>
+    /* Colour Overrides based on Family Crest */
+    #bg { background-color: #fdfbf7; background-image: none; }
+    #bg:after { display: none; } 
+    
+    /* Updated Logo Styling */
+/* Updated Logo Styling - Full Image */
+    #header .logo { 
+        border: none; 
+        border-radius: 0; 
+        overflow: visible; 
+        padding: 0; 
+        width: auto; 
+        height: auto; 
+        line-height: normal;
+        margin-bottom: 2rem; /* Adds space between logo and text */
+    }
+
+    #header nav ul li a:hover { color: #5a2e82; }
+    .major { border-bottom-color: #d4af37; }
+    input[type="submit"].primary, button.primary, .button.primary { background-color: #5a2e82; box-shadow: none; color: #ffffff !important; }
+    input[type="submit"].primary:hover, button.primary:hover, .button.primary:hover { background-color: #d4af37; }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -30,7 +43,7 @@
 				<!-- Header -->
 					<header id="header">
                         <div class="logo">
-                            <img src="images/crest.png" alt="House of Honk Crest" style="width: 100%; height: 100%; object-fit: cover;" />
+                            <img src="images/crest.png" alt="House of Honk Crest" style="width: 55%; max-width: 600px; height: auto;" />
                         </div>
                         <div class="content">
                             <div class="inner">
