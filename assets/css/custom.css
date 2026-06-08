@@ -52,6 +52,12 @@ html, body {
 #header nav ul li a {
     color: #5a2e82;
     border-color: #5a2e82;
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0 2rem 0 2.2rem; /* Extra 0.2rem on the left balances the letter-spacing */
+    min-width: 10rem;
 }
 #header nav ul li a:hover {
     background-color: #5a2e82;
@@ -60,6 +66,26 @@ html, body {
 
 /* Accents */
 .major { border-bottom-color: #d4af37; }
+
+/* Base Buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    font-size: 1.1rem;
+    font-weight: 600; /* Makes the text significantly heavier */
+    height: 3.5rem; /* Increases the overall button height */
+    line-height: 3.5rem; /* Keeps the text vertically centered */
+    padding: 0 2rem; /* Adds a bit more horizontal breathing room */
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    line-height: calc(3.5rem - 2px); /* Accounts for borders on native elements */
+}
 
 input[type="submit"].primary,
 button.primary,
@@ -135,4 +161,14 @@ p {
     #main article h2.major {
         font-size: 1.5625rem;
     }
+}
+
+/* Footer */
+#footer {
+    color: #6b6254; /* Readable, earthy grey-brown that sits subtly on cream */
+}
+
+#footer a {
+    /* Match the link underline to the muted text color */
+    border-bottom-color: rgba(107, 98, 84, 0.5); 
 }
