@@ -1,0 +1,91 @@
+/* Background */
+html, body {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f1de 40%, #eaddc5 100%);
+}
+
+#bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f1de 40%, #eaddc5 100%);
+}
+
+#bg::before,
+#bg::after {
+    background-image: none;
+    display: none;
+}
+
+/* Remove black ring */
+#header {
+    background-image: none;
+}
+
+/* Logo */
+#header .logo {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    padding: 0;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+/* Text colours */
+#header .content h1 { color: #5a2e82; }
+#header .content p { color: #2d5a1e; font-weight: 600; font-size: 1.064rem; }
+
+/* Header lines */
+#header > *:before {
+    background: #c4a457;
+}
+#header .content {
+    border-color: #c4a457;
+}
+#header nav ul {
+    border-color: #c4a457;
+}
+#header nav ul li {
+    border-color: #c4a457;
+}
+
+/* Navigation */
+#header nav ul li a {
+    color: #5a2e82;
+    border-color: #5a2e82;
+}
+#header nav ul li a:hover {
+    background-color: #5a2e82;
+    color: #ffffff;
+}
+
+/* Accents */
+.major { border-bottom-color: #d4af37; }
+
+input[type="submit"].primary,
+button.primary,
+.button.primary {
+    background-color: #5a2e82;
+    color: #ffffff;
+}
+
+input[type="submit"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+    background-color: #d4af37;
+}
+/* Remove dark vignette overlay */
+#wrapper {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Font Sizing Overrides */
+h1 {
+    font-size: 2.8125rem;
+}
+p {
+    font-size: 1.33rem;
+}
+@media screen and (max-width: 736px) {
+    h1 { font-size: 2.1875rem; }
+}
