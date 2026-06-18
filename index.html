@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Save the Date - David & Rachel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="custom.css" />
+    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom typography structure. Colours are inherited from custom.css */
+		#header .content .inner {
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .label {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        h1.script {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 68px;
+            line-height: 1.1;
+            margin: 10px 0 15px;
+            text-transform: none;
+            letter-spacing: normal;
+            border-bottom: none;
+        }
+
+        .names {
+            font-size: 46px;
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            margin: 20px 0;
+            color: #2d5a1e;
+        }
+
+        .names em {
+            font-style: italic;
+        }
+
+        .ampersand {
+            display: block;
+            font-size: 30px;
+            font-style: italic;
+            color: #c4a457;
+            margin: 4px 0;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #c4a457;
+        }
+
+        .divider-diamond {
+            width: 6px;
+            height: 6px;
+            background: #c4a457;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        .date-block {
+            margin: 24px 0 0;
+        }
+
+        .date-day {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .date-numerals {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0.04em;
+            margin: 6px 0;
+            color: #2d5a1e;
+        }
+
+        .date-year {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            margin-bottom: 0;
+        }
+
+        .location-block {
+            margin-top: 30px;
+        }
+
+        .venue-name {
+            font-size: 16px;
+            font-weight: 400;
+            color: #5a2e82;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .venue-suburb {
+            font-size: 13px;
+            font-weight: 300;
+            font-style: italic;
+            margin-top: 5px;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 520px) {
+            h1.script { font-size: 56px; }
+            .names { font-size: 38px; }
+            .date-numerals { font-size: 44px; }
+            #header .content .inner { padding: 3rem 1.5rem; }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+        <header id="header">
+            <div class="content">
+                <div class="inner">
+                        <p class="label">Please</p>
+                        <h1 class="script">Save the Date</h1>
+                        <p class="label">for the wedding of</p>
+
+                        <div class="divider">
+                            <span class="divider-diamond"></span>
+                        </div>
+
+                        <div class="names">
+                            <em>David</em>
+                            <span class="ampersand">&amp;</span>
+                            <em>Rachel</em>
+                        </div>
+
+                        <div class="divider">
+                            <span class="divider-diamond"></span>
+                        </div>
+
+<div class="date-block">
+                            <p class="date-day">Saturday</p>
+                            <p class="date-numerals">17.04</p>
+                            <p class="date-year">2027</p>
+                        </div>
+
+                        <div class="location-block">
+                            <p class="venue-name">Puss &amp; Mew</p>
+                            <p class="venue-suburb">Nunawading, Victoria, Australia</p>
+                        </div>
+                    </div>
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="#reception">Reception</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="main">
+            <article id="reception">
+                <h2 class="major">Reception</h2>
+                <h3>Puss &amp; Mew</h3>
+                <p>Details regarding the reception will follow in the formal invitation.</p>
+            </article>
+        </div>
+
+        <footer id="footer">
+            <p class="copyright">&copy; David</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
