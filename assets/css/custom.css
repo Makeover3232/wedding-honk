@@ -30,31 +30,50 @@ html, body {
     margin-bottom: 2rem;
 }
 
-/* Text colours */
-#header .content h1 { color: #5a2e82; }
+#header .logo img {
+    width: auto;
+    max-width: 380px;
+    height: auto;
+}
+
+/* Header Content & Spacing */
+#header .content {
+    border-color: #c4a457;
+    padding-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#header .content h1 { 
+    color: #5a2e82; 
+}
+
 #header .content p { 
     color: #2d5a1e; 
     font-weight: 600; 
     font-size: 1.064rem; 
-    line-height: 1.6em;       /* Tighter line spacing */
-    margin-bottom: 1.25em;    /* Controlled paragraph gap */
+    line-height: 1.6em;
+    margin-bottom: 1.25em;
 }
 
 /* Header lines */
 #header > *:before {
     background: #c4a457;
 }
-#header .content {
-    border-color: #c4a457;
-}
+
+/* Navigation & Borders */
 #header nav ul {
     border-color: #c4a457;
 }
+
 #header nav ul li {
     border-color: #c4a457;
+    border-left: solid 1px #c4a457 !important; /* Forces vertical divider between buttons gold */
 }
 
-/* Navigation */
+#header nav ul li:first-child {
+    border-left: 0 !important;
+}
+
 #header nav ul li a {
     color: #5a2e82;
     border-color: #5a2e82;
@@ -62,49 +81,20 @@ html, body {
     font-weight: 600;
     height: 3.5rem;
     line-height: 3.5rem;
-    padding: 0 2rem 0 2.2rem; /* Extra 0.2rem on the left balances the letter-spacing */
+    padding: 0 2rem 0 2.2rem;
     min-width: 10rem;
 }
+
 #header nav ul li a:hover {
     background-color: #5a2e82;
     color: #ffffff;
 }
 
 /* Accents */
-.major { border-bottom-color: #d4af37; }
-
-/* Base Buttons */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
-.button {
-    font-size: 1.1rem;
-    font-weight: 600; /* Makes the text significantly heavier */
-    height: 3.5rem; /* Increases the overall button height */
-    line-height: 3.5rem; /* Keeps the text vertically centered */
-    padding: 0 2rem; /* Adds a bit more horizontal breathing room */
+.major { 
+    border-bottom-color: #d4af37; 
 }
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-    line-height: calc(3.5rem - 2px); /* Accounts for borders on native elements */
-}
-
-input[type="submit"].primary,
-button.primary,
-.button.primary {
-    background-color: #5a2e82;
-    color: #ffffff;
-}
-
-input[type="submit"].primary:hover,
-button.primary:hover,
-.button.primary:hover {
-    background-color: #d4af37;
-}
 /* Remove dark vignette overlay */
 #wrapper {
     background: transparent;
@@ -122,45 +112,31 @@ p {
     h1 { font-size: 2.1875rem; }
 }
 
-/* Articles (Popups) Theme Overrides */
+/* ==========================================================================
+   Global Modal / Popup Styling (Cream Fill + Forest Green Border)
+   ========================================================================== */
+
 #main article {
-    background-color: rgba(0, 0, 0, 0.95); /* Black background */
-    color: #f4f1de; /* Cream body text */
-    font-weight: normal; /* Regular text weight */
+    background-color: rgba(244, 241, 222, 0.98) !important; /* Rich cream */
+    border: 2.5px solid #2d5a1e !important;                 /* Forest green border */
+    color: #2d5a1e !important;                              /* Forest green text */
+    font-weight: normal;
 }
 
-#main article h1, #main article h2, #main article h3, 
-#main article h4, #main article h5, #main article h6 {
-    color: #5a2e82; /* Purple headings */
+/* Modal Headings */
+#main article h1, 
+#main article h2, 
+#main article h3, 
+#main article h4, 
+#main article h5, 
+#main article h6 {
+    color: #5a2e82 !important;                              /* Wedding purple */
     font-weight: 700;
 }
 
 #main article h2.major {
     font-size: 1.875rem;
-    border-bottom-color: #c4a457;
-}
-
-#main article strong, #main article b {
-    color: #99731e; /* Antique gold accent */
-    font-weight: 700;
-}
-
-#main article#reception h3 {
-    color: #9e1b1b; /* Red subheading for Puss & Mew */
-    font-size: 1.6rem;
-    margin-bottom: 0.25rem;
-}
-
-#main article#reception p:first-of-type {
-    font-size: 1.36rem;
-}
-
-/* Update close button 'X' graphic */
-#main article .close:before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23f4f1de%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-}
-#main article .close:hover:before {
-    background-color: rgba(244, 241, 222, 0.1); /* Subtle cream circle on hover */
+    border-bottom-color: #c4a457 !important;                /* Gold underline */
 }
 
 @media screen and (max-width: 736px) {
@@ -169,29 +145,95 @@ p {
     }
 }
 
-/* Footer */
-#footer {
-    color: #6b6254; /* Readable, earthy grey-brown that sits subtly on cream */
+#main article strong, 
+#main article b {
+    color: #99731e;                                         /* Antique gold accent */
+    font-weight: 700;
 }
 
-#footer a {
-    /* Match the link underline to the muted text color */
-    border-bottom-color: rgba(107, 98, 84, 0.5); 
-}
-/* Hens Page Adjustments */
-#header .logo img {
-    width: auto;
-    max-width: 380px;         /* ~2x the previous rendered crest dimensions */
-    height: auto;
+/* Modal Body Text & Form Labels */
+#main article p,
+#main article label,
+#main article .field label {
+    color: #2d5a1e !important;
+    font-weight: 600;
 }
 
-#header .content {
-    padding-bottom: 3.5rem;   /* Clears space before the bottom gold line */
-    margin-bottom: 2.5rem;    /* Pushes the gold line away from RSVP */
+/* Form Inputs & Textarea */
+#main article input[type="text"],
+#main article input[type="email"],
+#main article textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #2d5a1e !important;
+    color: #2d5a1e !important;
 }
-/* Hens RSVP Modal Styling */
-#main article#rsvp {
-    background-color: rgba(45, 90, 30, 0.96) !important; /* #2d5a1e */
+
+/* Radio Buttons */
+#main article input[type="radio"] + label:before {
+    border-color: #2d5a1e !important;
+}
+
+#main article input[type="radio"]:checked + label:before {
+    background-color: #2d5a1e !important;
+}
+
+/* Modal 'X' Close Button */
+#main article .close:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='2' x2='18' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3C/svg%3E") !important;
+}
+
+#main article .close:hover:before {
+    background-color: rgba(45, 90, 30, 0.1) !important;
+}
+
+/* Optional Specific Section Overrides */
+#main article#reception h3 {
+    color: #9e1b1b !important;
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+}
+
+#main article#reception p:first-of-type {
+    font-size: 1.36rem;
+}
+
+/* ==========================================================================
+   Buttons (Forms & Modal Action Links)
+   ========================================================================== */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0 2rem;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    line-height: calc(3.5rem - 2px);
+}
+
+/* Primary purple buttons (Submit & Details RSVP jump button) */
+#main article input[type="submit"].primary,
+#main article button.primary,
+#main article .button.primary {
+    background-color: #5a2e82 !important;
+    color: #d4af37 !important;
+    border-color: #d4af37 !important;
+}
+
+#main article input[type="submit"].primary:hover,
+#main article button.primary:hover,
+#main article .button.primary:hover {
+    background-color: #d4af37 !important;
+    color: #5a2e82 !important;
 }
 
 /* Formspree AJAX feedback messages */
@@ -199,9 +241,9 @@ p {
     display: none;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
-    border: 1px solid #c4a457;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #f4f1de;
+    border: 1px solid #2d5a1e !important;
+    background-color: rgba(45, 90, 30, 0.05) !important;
+    color: #2d5a1e !important;
     font-weight: 600;
     text-align: center;
 }
@@ -212,71 +254,12 @@ p {
     display: block;
     margin-top: 0.25rem;
 }
-/* Hens RSVP Modal Styling - Cream Fill with Green Border */
-#main article#rsvp {
-    background-color: rgba(244, 241, 222, 0.98) !important; /* Rich cream */
-    border: 2.5px solid #2d5a1e !important;                 /* Forest green border */
-    color: #2d5a1e !important;                              /* Text goes forest green */
+
+/* Footer */
+#footer {
+    color: #6b6254;
 }
 
-/* Modal Headings & Prompts */
-#main article#rsvp h1,
-#main article#rsvp h2,
-#main article#rsvp h3,
-#main article#rsvp h2.major {
-    color: #5a2e82 !important;                              /* Keep wedding purple for primary title */
-    border-bottom-color: #c4a457 !important;                /* Gold accent underline */
-}
-
-/* Body and Form Labels */
-#main article#rsvp p,
-#main article#rsvp label,
-#main article#rsvp .field label {
-    color: #2d5a1e !important;                              /* Make standard labels & descriptions forest green */
-    font-weight: 600;
-}
-
-/* Form Input & Textarea Elements */
-#main article#rsvp input[type="text"],
-#main article#rsvp input[type="email"],
-#main article#rsvp textarea {
-    background-color: #ffffff !important;                   /* High-contrast white input backgrounds */
-    border: 1px solid #2d5a1e !important;                   /* Forest green input boundaries */
-    color: #2d5a1e !important;                              /* Type color matches deep green */
-}
-
-/* Radio Buttons */
-#main article#rsvp input[type="radio"] + label:before {
-    border-color: #2d5a1e !important;                       /* Circle outline goes deep green */
-}
-
-#main article#rsvp input[type="radio"]:checked + label:before {
-    background-color: #2d5a1e !important;                   /* Circle dot goes deep green */
-}
-
-/* Exit 'X' Button styling - Overwriting white SVG to match green */
-#main article#rsvp .close:before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='2' x2='18' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3C/svg%3E") !important;
-}
-
-#main article#rsvp .close:hover:before {
-    background-color: rgba(45, 90, 30, 0.1) !important;     /* Subtle green hover highlight */
-}
-
-/* Formspree Validation Alerts */
-#main article#rsvp [data-fs-success] {
-    border-color: #2d5a1e !important;
-    background-color: rgba(45, 90, 30, 0.05) !important;
-    color: #2d5a1e !important;
-}
-/* Gold text on RSVP Submit Button */
-#main article#rsvp input[type="submit"].primary {
-    color: #d4af37 !important;
-    border-color: #d4af37 !important;
-}
-
-/* Invert colors cleanly on hover so it stays readable */
-#main article#rsvp input[type="submit"].primary:hover {
-    background-color: #d4af37 !important;
-    color: #5a2e82 !important;
+#footer a {
+    border-bottom-color: rgba(107, 98, 84, 0.5); 
 }
