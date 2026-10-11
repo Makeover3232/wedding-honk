@@ -32,7 +32,13 @@ html, body {
 
 /* Text colours */
 #header .content h1 { color: #5a2e82; }
-#header .content p { color: #2d5a1e; font-weight: 600; font-size: 1.064rem; }
+#header .content p { 
+    color: #2d5a1e; 
+    font-weight: 600; 
+    font-size: 1.064rem; 
+    line-height: 1.6em;       /* Tighter line spacing */
+    margin-bottom: 1.25em;    /* Controlled paragraph gap */
+}
 
 /* Header lines */
 #header > *:before {
@@ -135,7 +141,7 @@ p {
 }
 
 #main article strong, #main article b {
-    color: #9e1b1b; /* Crest red subheadings */
+    color: #99731e; /* Antique gold accent */
     font-weight: 700;
 }
 
@@ -171,4 +177,106 @@ p {
 #footer a {
     /* Match the link underline to the muted text color */
     border-bottom-color: rgba(107, 98, 84, 0.5); 
+}
+/* Hens Page Adjustments */
+#header .logo img {
+    width: auto;
+    max-width: 380px;         /* ~2x the previous rendered crest dimensions */
+    height: auto;
+}
+
+#header .content {
+    padding-bottom: 3.5rem;   /* Clears space before the bottom gold line */
+    margin-bottom: 2.5rem;    /* Pushes the gold line away from RSVP */
+}
+/* Hens RSVP Modal Styling */
+#main article#rsvp {
+    background-color: rgba(45, 90, 30, 0.96) !important; /* #2d5a1e */
+}
+
+/* Formspree AJAX feedback messages */
+[data-fs-success] {
+    display: none;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #c4a457;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f4f1de;
+    font-weight: 600;
+    text-align: center;
+}
+
+[data-fs-error] {
+    color: #ff9999;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+/* Hens RSVP Modal Styling - Cream Fill with Green Border */
+#main article#rsvp {
+    background-color: rgba(244, 241, 222, 0.98) !important; /* Rich cream */
+    border: 2.5px solid #2d5a1e !important;                 /* Forest green border */
+    color: #2d5a1e !important;                              /* Text goes forest green */
+}
+
+/* Modal Headings & Prompts */
+#main article#rsvp h1,
+#main article#rsvp h2,
+#main article#rsvp h3,
+#main article#rsvp h2.major {
+    color: #5a2e82 !important;                              /* Keep wedding purple for primary title */
+    border-bottom-color: #c4a457 !important;                /* Gold accent underline */
+}
+
+/* Body and Form Labels */
+#main article#rsvp p,
+#main article#rsvp label,
+#main article#rsvp .field label {
+    color: #2d5a1e !important;                              /* Make standard labels & descriptions forest green */
+    font-weight: 600;
+}
+
+/* Form Input & Textarea Elements */
+#main article#rsvp input[type="text"],
+#main article#rsvp input[type="email"],
+#main article#rsvp textarea {
+    background-color: #ffffff !important;                   /* High-contrast white input backgrounds */
+    border: 1px solid #2d5a1e !important;                   /* Forest green input boundaries */
+    color: #2d5a1e !important;                              /* Type color matches deep green */
+}
+
+/* Radio Buttons */
+#main article#rsvp input[type="radio"] + label:before {
+    border-color: #2d5a1e !important;                       /* Circle outline goes deep green */
+}
+
+#main article#rsvp input[type="radio"]:checked + label:before {
+    background-color: #2d5a1e !important;                   /* Circle dot goes deep green */
+}
+
+/* Exit 'X' Button styling - Overwriting white SVG to match green */
+#main article#rsvp .close:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='2' x2='18' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' stroke='%232d5a1e' stroke-width='1.5' /%3E%3C/svg%3E") !important;
+}
+
+#main article#rsvp .close:hover:before {
+    background-color: rgba(45, 90, 30, 0.1) !important;     /* Subtle green hover highlight */
+}
+
+/* Formspree Validation Alerts */
+#main article#rsvp [data-fs-success] {
+    border-color: #2d5a1e !important;
+    background-color: rgba(45, 90, 30, 0.05) !important;
+    color: #2d5a1e !important;
+}
+/* Gold text on RSVP Submit Button */
+#main article#rsvp input[type="submit"].primary {
+    color: #d4af37 !important;
+    border-color: #d4af37 !important;
+}
+
+/* Invert colors cleanly on hover so it stays readable */
+#main article#rsvp input[type="submit"].primary:hover {
+    background-color: #d4af37 !important;
+    color: #5a2e82 !important;
 }
